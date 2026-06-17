@@ -1,0 +1,127 @@
+/* ───────────────────────────────────────────────────────────────
+   Shepherd.js Tour Overrides
+   Matches Brand's dark design system tokens.
+   ─────────────────────────────────────────────────────────────── */
+
+.shepherd-element {
+  background: var(--color-surface, #0d0d0d);
+  border: 1px solid var(--color-cream-muted, rgba(251, 251, 239, 0.2));
+  border-radius: var(--radius-lg, 18px);
+  box-shadow: 0 0 40px rgba(251, 251, 239, 0.05);
+  max-width: 340px;
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  color: var(--color-cream, #fbfbef);
+  padding: 24px;
+}
+
+.shepherd-text {
+  font-size: var(--text-sm, 13px);
+  line-height: 1.6;
+  color: var(--color-cream-dim, rgba(251, 251, 239, 0.7));
+}
+
+.shepherd-header {
+  padding: 0;
+}
+
+.shepherd-header h3 {
+  font-size: var(--text-base, 15px);
+  font-weight: var(--weight-bold, 700);
+  margin-bottom: 8px;
+  color: var(--color-cream, #fbfbef);
+}
+
+/* Step indicator badge injected via HTML in step text */
+.shepherd-step-indicator {
+  font-size: var(--text-xs, 11px);
+  font-weight: var(--weight-semibold, 600);
+  letter-spacing: var(--tracking-wide, 0.04em);
+  text-transform: uppercase;
+  color: var(--color-text-muted, rgba(251, 251, 239, 0.35));
+  margin-bottom: 8px;
+}
+
+/* Buttons — shared base */
+.shepherd-button {
+  border-radius: var(--radius-full, 9999px);
+  padding: 8px 20px;
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-semibold, 600);
+  cursor: pointer;
+  transition: background var(--duration-fast, 120ms) var(--ease-out),
+              color var(--duration-fast, 120ms) var(--ease-out);
+}
+
+.shepherd-button-primary {
+  background: var(--color-cream, #fbfbef);
+  color: var(--color-invert-text, #000);
+  border: none;
+}
+
+.shepherd-button-primary:hover {
+  opacity: 0.9;
+}
+
+.shepherd-button-secondary {
+  background: transparent;
+  border: 1px solid var(--color-cream-muted, rgba(251, 251, 239, 0.2));
+  color: var(--color-cream, #fbfbef);
+}
+
+.shepherd-button-secondary:hover {
+  background: rgba(251, 251, 239, 0.06);
+}
+
+/* Skip link — top-right positioning */
+.shepherd-cancel-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  padding: 4px 10px;
+  font-size: var(--text-xs, 11px);
+  color: var(--color-text-muted, rgba(251, 251, 239, 0.35));
+}
+
+.shepherd-cancel-link:hover {
+  color: var(--color-cream, #fbfbef);
+  background: transparent;
+}
+
+/* Modal overlay */
+.shepherd-modal-overlay-container {
+  fill: rgba(0, 0, 0, 0.72);
+}
+
+/* Cancel icon (X button) */
+.shepherd-cancel-icon {
+  color: var(--color-text-muted, rgba(251, 251, 239, 0.4));
+}
+
+.shepherd-cancel-icon:hover {
+  color: var(--color-cream, #fbfbef);
+}
+
+/* Footer — prev/next row */
+.shepherd-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  gap: 8px;
+  padding: 0;
+}
+
+/* Arrow — match element background */
+.shepherd-arrow,
+.shepherd-arrow::before {
+  background: var(--color-surface, #0d0d0d);
+  border-color: var(--color-cream-muted, rgba(251, 251, 239, 0.2));
+}
+
+/* Reduced-motion: skip Shepherd's enter animations */
+@media (prefers-reduced-motion: reduce) {
+  .shepherd-element {
+    transition: none !important;
+  }
+}
